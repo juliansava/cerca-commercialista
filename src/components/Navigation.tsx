@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import { blogTopics } from '../data/blog';
 
 const cities = [
   'Roma', 'Milano', 'Napoli', 'Torino', 'Palermo', 'Genova', 'Bologna',
@@ -17,13 +18,6 @@ const services = [
   'Consulenza Societaria',
   'Gestione Paghe',
   'Contenzioso Tributario'
-];
-
-const blogTopics = [
-  'Novità Fiscali',
-  'Guide Pratiche',
-  'Casi Studio',
-  'Approfondimenti'
 ];
 
 export default function Navigation() {
@@ -130,11 +124,11 @@ export default function Navigation() {
             >
               {blogTopics.map((topic) => (
                 <Link
-                  key={topic}
-                  to={`/blog/topic/${encodeURIComponent(topic.toLowerCase())}`}
+                  key={topic.id}
+                  to={`/blog/topic/${topic.id}`}
                   className="block px-4 py-2 text-gray-600 hover:bg-gray-50 text-sm"
                 >
-                  {topic}
+                  {topic.name}
                 </Link>
               ))}
               <div className="border-t border-gray-100 mt-2 pt-2">
@@ -211,12 +205,12 @@ export default function Navigation() {
                   <div className="space-y-2">
                     {blogTopics.map((topic) => (
                       <Link
-                        key={topic}
-                        to={`/blog/topic/${encodeURIComponent(topic.toLowerCase())}`}
+                        key={topic.id}
+                        to={`/blog/topic/${topic.id}`}
                         className="block text-gray-600 hover:text-blue-600 text-sm"
                         onClick={toggleMobileMenu}
                       >
-                        {topic}
+                        {topic.name}
                       </Link>
                     ))}
                     <Link
