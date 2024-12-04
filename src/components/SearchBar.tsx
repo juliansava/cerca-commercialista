@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
 import { Search, MapPin, Filter } from 'lucide-react';
+import { useSearch } from '../hooks/useSearch';
 
-interface SearchBarProps {
-  onSearch: (query: string, filters: any) => void;
+interface SearchFilters {
+  location: string;
+  specialization: string;
+  industry: string;
+  onlineAvailable: boolean;
 }
 
-export default function SearchBar({ onSearch }: SearchBarProps) {
+export default function SearchBar() {
+  const { handleSearch, isSearching } = useSearch();
   const [query, setQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<SearchFilters>({
     location: '',
     specialization: '',
     industry: '',
     onlineAvailable: false,
   });
 
-  const handleSearch = () => {
-    onSearch(query, filters);
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleSearch(query, filters);
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-4">
+    <form onSubmit={onSubmit} className="w-full max-w-4xl mx-auto space-y-4">
       <div className="flex gap-2">
         <div className="flex-1 relative">
           <input
@@ -33,16 +39,18 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
           <Search className="absolute left-3 top-3.5 text-gray-400 w-5 h-5" />
         </div>
         <button
+          type="button"
           onClick={() => setShowFilters(!showFilters)}
           className="px-4 py-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors"
         >
           <Filter className="w-5 h-5 text-gray-600" />
         </button>
         <button
-          onClick={handleSearch}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          type="submit"
+          disabled={isSearching}
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
         >
-          Cerca
+          {isSearching ? 'Ricerca...' : 'Cerca'}
         </button>
       </div>
 
@@ -102,6 +110,6 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
           </div>
         </div>
       )}
-    </div>
+    </form>
   );
 }
