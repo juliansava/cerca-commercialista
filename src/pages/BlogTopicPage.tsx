@@ -25,7 +25,7 @@ export default function BlogTopicPage() {
           {topicPosts.map((post) => (
             <Link
               key={post.id}
-              to={`/blog/${post.id}`}
+              to={`/blog/${topic}/${post.slug}`}
               className="group"
             >
               <article className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group-hover:shadow-md transition-shadow">

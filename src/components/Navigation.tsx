@@ -125,7 +125,7 @@ export default function Navigation() {
               {blogTopics.map((topic) => (
                 <Link
                   key={topic.id}
-                  to={`/blog/topic/${topic.id}`}
+                  to={`/blog/${topic.id}`}
                   className="block px-4 py-2 text-gray-600 hover:bg-gray-50 text-sm"
                 >
                   {topic.name}
@@ -206,7 +206,7 @@ export default function Navigation() {
                     {blogTopics.map((topic) => (
                       <Link
                         key={topic.id}
-                        to={`/blog/topic/${topic.id}`}
+                        to={`/blog/${topic.id}`}
                         className="block text-gray-600 hover:text-blue-600 text-sm"
                         onClick={toggleMobileMenu}
                       >

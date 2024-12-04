@@ -21,6 +21,7 @@ export const blogTopics: BlogTopic[] = [
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
+    slug: 'novita-fiscali-2024-partite-iva',
     title: 'Novità Fiscali 2024: Cosa Cambia per le Partite IVA',
     excerpt: 'Una panoramica completa delle principali novità fiscali per il 2024 e come impattano le partite IVA.',
     content: `Le novità fiscali del 2024 portano importanti cambiamenti per le partite IVA. 
@@ -33,6 +34,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '2',
+    slug: 'guida-fatturazione-elettronica',
     title: 'Guida alla Fatturazione Elettronica per Principianti',
     excerpt: 'Tutto quello che devi sapere per iniziare con la fatturazione elettronica in modo corretto.',
     content: `La fatturazione elettronica è ormai obbligatoria per la maggior parte delle attività. 
@@ -45,6 +47,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '3',
+    slug: 'ottimizzazione-fiscale-startup',
     title: 'Case Study: Ottimizzazione Fiscale per Startup Innovative',
     excerpt: 'Analisi di un caso reale di ottimizzazione fiscale per una startup del settore tech.',
     content: `In questo caso studio analizziamo come una startup innovativa del settore tech 

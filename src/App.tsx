@@ -51,8 +51,8 @@ function App() {
             <Route path="/register" element={<RegisterAccountantPage />} />
             <Route path="/studio/:studioId" element={<StudioPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/blog/topic/:topic" element={<BlogTopicPage />} />
-            <Route path="/blog/:id" element={<BlogPostPage />} />
+            <Route path="/blog/:topic" element={<BlogTopicPage />} />
+            <Route path="/blog/:topic/:slug" element={<BlogPostPage />} />
           </Routes>
 
           <footer className="bg-gray-900 text-gray-300 mt-16">

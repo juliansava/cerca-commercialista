@@ -4,8 +4,8 @@ import { Clock, Calendar, User } from 'lucide-react';
 import { blogPosts } from '../data/blog';
 
 export default function BlogPostPage() {
-  const { id } = useParams<{ id: string }>();
-  const post = blogPosts.find(p => p.id === id);
+  const { topic, slug } = useParams<{ topic: string; slug: string }>();
+  const post = blogPosts.find(p => p.topic === topic && p.slug === slug);
 
   if (!post) {
     return <div>Post not found</div>;
