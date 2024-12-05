@@ -21,7 +21,7 @@ function App() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
               <div className="flex items-center justify-between">
                 <a href="/" className="flex items-center">
-                  <img src="/favicon.ico" alt="Logo" className="w-6 h-6 md:w-8 md:h-8" />
+                  <img src="cdn-icons-png.freepik.com/256/14320/14320004.png" alt="Logo" className="w-6 h-6 md:w-8 md:h-8" />
                   <h1 className="ml-2 text-lg md:text-2xl font-bold text-gray-900">Cerca Commercialista</h1>
                 </a>
                 <Navigation />
