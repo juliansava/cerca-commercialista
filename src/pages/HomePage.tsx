@@ -31,10 +31,10 @@ export default function HomePage() {
                   <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center md:text-left">
                     Trova{' '}
                     <span className="relative">
-                      <span className="relative z-10">il Tuo Commercialista</span>
+                      <span className="relative z-10">il tuo commercialista</span>
                       <span className="absolute bottom-1 left-0 w-full h-3 bg-blue-200/60 -rotate-1"></span>
                     </span>
-                    {' '}Ideale
+                    {' '}ideale
                   </h2>
                   <p className="text-xl text-gray-600 mb-8 text-center md:text-left">
                     Connettiti con professionisti qualificati nella tua zona

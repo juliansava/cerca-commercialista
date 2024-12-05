@@ -56,7 +56,7 @@ export default function RegisterAccountantPage() {
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <img src="/favicon.ico" alt="Logo" className="w-12 h-12 mx-auto mb-4" />
+          <img src="./favicon.ico" alt="Logo" className="w-12 h-12 mx-auto mb-4" />
           <h1 className="text-3xl font-bold text-gray-900">Registra il Tuo Profilo</h1>
           <p className="mt-2 text-gray-600">
             Raggiungi nuovi clienti e fai crescere la tua attività

@@ -35,7 +35,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
-          <img src="/favicon.ico" alt="Logo" className="w-12 h-12" />
+          <img src="./favicon.ico" alt="Logo" className="w-12 h-12" />
         </div>
         <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
           Accedi al tuo account
